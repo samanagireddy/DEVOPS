@@ -1,0 +1,7 @@
+---
+all:
+  children:
+    terraform:
+      hosts:
+        terraform-test-Srv1:
+          ansible_host: 192.168.10.10

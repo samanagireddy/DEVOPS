@@ -1,0 +1,13 @@
+---
+- name: Removing user Deploy after finishing deployment
+  hosts: "{{ remote_host }}"
+  remote_user: "{{ remote_login }}"
+  become: true
+  become_method: "sudo"
+
+  tasks:
+    - name: Remove User Deploy
+      user:
+        name: deploy
+        state: absent
+        remove: true
